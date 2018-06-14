@@ -1,0 +1,12 @@
+Source: ros-indigo-criutils
+Section: misc
+Priority: extra
+Maintainer: Francisco Suarez-Ruiz <fsuarez6@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-indigo-catkin
+Homepage: http://wiki.ros.org/criutils
+Standards-Version: 3.9.2
+
+Package: ros-indigo-criutils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-numpy, python-termcolor, ros-indigo-baldor, ros-indigo-cv-bridge, ros-indigo-geometry-msgs, ros-indigo-image-geometry, ros-indigo-resource-retriever, ros-indigo-rostopic, ros-indigo-sensor-msgs, ros-indigo-std-msgs, ros-indigo-visualization-msgs
+Description: The criutils package
