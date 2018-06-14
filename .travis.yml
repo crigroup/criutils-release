@@ -18,10 +18,14 @@ before_install:
   - wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
   - sudo apt-get update
   - sudo apt-get install -y python-catkin-pkg python-rosdep python-wstool ros-$ROS_DISTRO-catkin
-  - source /opt/ros/$ROS_DISTRO/setup.bash
+  # Install docs tools
+  - sudo apt-get install python-numpydoc ros-$ROS_DISTRO-rosdoc-lite
   # Prepare rosdep to install dependencies.
+  - source /opt/ros/$ROS_DISTRO/setup.bash
   - sudo rosdep init
   - rosdep update
+  # Install coveralls
+  - pip install coveralls --user
 
 # Create a catkin workspace with the package under integration.
 install:
@@ -33,6 +37,8 @@ install:
   - source ~/catkin_ws/devel/setup.bash
   - cd ~/catkin_ws/src
   - ln -s $CI_SOURCE_PATH .
+  # This is required only for installing from source
+  - git clone https://github.com/crigroup/baldor.git
 
 # Install all dependencies
 before_script:
@@ -44,5 +50,14 @@ script:
   - cd ~/catkin_ws
   - catkin_make install
   - source devel/setup.bash
-  - cd ~/catkin_ws/src/criutils/tests
-  - nosetests -v
+  # Run the tests
+  - catkin_make run_tests
+  - catkin_test_results
+  - cd ~/catkin_ws/src/criutils
+  # Build the docs
+  - rosdoc_lite .
+  # Run the tests with coverage
+  - nosetests tests/ --with-coverage --cover-package=criutils -v
+
+after_success:
+  - coveralls
