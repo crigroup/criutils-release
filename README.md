@@ -1,3 +1,26 @@
+## criutils (melodic) - 0.1.3-2
+
+The packages in the `criutils` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --rosdistro melodic --track melodic criutils` on `Mon, 16 Dec 2019 09:34:07 -0000`
+
+The `criutils` package was released.
+
+Version of package(s) in repository `criutils`:
+
+- upstream repository: https://github.com/crigroup/criutils.git
+- release repository: https://github.com/crigroup/criutils-release.git
+- rosdistro version: `0.1.3-1`
+- old version: `0.1.3-1`
+- new version: `0.1.3-2`
+
+Versions of tools used:
+
+- bloom version: `0.9.0`
+- catkin_pkg version: `0.4.14`
+- rosdep version: `0.17.1`
+- rosdistro version: `0.7.5`
+- vcstools version: `0.1.42`
+
+
 ## criutils (melodic) - 0.1.3-1
 
 The packages in the `criutils` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --rosdistro melodic --track melodic criutils` on `Sat, 30 Nov 2019 05:50:51 -0000`
