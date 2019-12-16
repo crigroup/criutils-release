@@ -1,0 +1,12 @@
+Source: ros-melodic-criutils
+Section: misc
+Priority: optional
+Maintainer: Francisco Suarez-Ruiz <fsuarez6@gmail.com>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin
+Homepage: http://wiki.ros.org/criutils
+Standards-Version: 3.9.2
+
+Package: ros-melodic-criutils
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, python-numpy, python-termcolor, ros-melodic-baldor, ros-melodic-cv-bridge, ros-melodic-geometry-msgs, ros-melodic-image-geometry, ros-melodic-resource-retriever, ros-melodic-rostopic, ros-melodic-sensor-msgs, ros-melodic-std-msgs, ros-melodic-visualization-msgs
+Description: The criutils package
