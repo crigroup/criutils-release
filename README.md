@@ -1,3 +1,26 @@
+## criutils (noetic) - 0.1.4-1
+
+The packages in the `criutils` repository were released into the `noetic` distro by running `/usr/bin/bloom-release --rosdistro noetic --track noetic criutils` on `Sun, 25 Oct 2020 04:29:24 -0000`
+
+The `criutils` package was released.
+
+Version of package(s) in repository `criutils`:
+
+- upstream repository: https://github.com/crigroup/criutils.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `null`
+- new version: `0.1.4-1`
+
+Versions of tools used:
+
+- bloom version: `0.10.0`
+- catkin_pkg version: `0.4.23`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.3`
+- vcstools version: `0.1.42`
+
+
 ## criutils (melodic) - 0.1.3-2
 
 The packages in the `criutils` repository were released into the `melodic` distro by running `/usr/bin/bloom-release --rosdistro melodic --track melodic criutils` on `Mon, 16 Dec 2019 09:34:07 -0000`
